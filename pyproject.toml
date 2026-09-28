@@ -1,0 +1,17 @@
+[project]
+name = "multilingual-uprm"
+version = "1.0.0"
+description = "Step-level scoring of multilingual reasoning chains (uPRM) on top of the ICM pipeline."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "multilingual-icm"]
+
+# `multilingual-icm` is the sibling repository ICM_work_. Either install it
+# (pip install -e ../ICM_work_) or keep the two checkouts side by side:
+# uprm/__init__.py finds ../ICM_work_ on its own.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["uprm*"]

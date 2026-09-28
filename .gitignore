@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+
+# Working directory for analysis re-runs: caches and outputs (29 MB, see README)
+runs/
+# Slurm job logs
+logs/
+*.out

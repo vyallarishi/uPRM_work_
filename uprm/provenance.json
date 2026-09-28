@@ -1,0 +1,42 @@
+{
+ "python": {
+  "uprm/experiments/q02_does_it_help_at_scale/audit_arithmetic_false_positives.py": "audit_arith.py",
+  "uprm/experiments/q02_does_it_help_at_scale/audit_arm_b.py": "audit_armb.py",
+  "uprm/experiments/q02_does_it_help_at_scale/audit_arm_b_counts.py": "audit_armb2.py",
+  "uprm/experiments/q02_does_it_help_at_scale/audit_precedence_bug_impact.py": "audit_impact.py",
+  "uprm/experiments/q02_does_it_help_at_scale/decide_with_scores.py": "stage36_decide.py",
+  "uprm/experiments/q02_does_it_help_at_scale/error_types.py": "stage37_error_types.py",
+  "uprm/experiments/q02_does_it_help_at_scale/error_types_fixed_arithmetic.py": "stage37R_error_types.py",
+  "uprm/experiments/q02_does_it_help_at_scale/fix_impact.py": "fix_impact.py",
+  "uprm/experiments/q02_does_it_help_at_scale/harvest_cleaning_small.py": "stage34_uprm_harvest.py",
+  "uprm/experiments/q02_does_it_help_at_scale/length_corrected_selection.py": "stage40_length_corrected.py",
+  "uprm/experiments/q02_does_it_help_at_scale/length_corrected_selection_fixed_arithmetic.py": "stage40R_length_corrected.py",
+  "uprm/experiments/q02_does_it_help_at_scale/pool_level_features.py": "stage38_pool_level.py",
+  "uprm/experiments/q02_does_it_help_at_scale/score_all_chains.py": "stage35_score_all.py",
+  "uprm/experiments/q02_does_it_help_at_scale/sft_chain_selection.py": "stage39_sft_selection.py",
+  "uprm/experiments/q02_does_it_help_at_scale/sft_chain_selection_fixed_arithmetic.py": "stage39R_sft_selection.py",
+  "uprm/experiments/q02_does_it_help_at_scale/step_partition_by_language.py": "step_partition_check.py",
+  "uprm/experiments/q03_is_the_error_position_coordinated/signature_cache.py": "stage43_sigcache.py",
+  "uprm/experiments/q03_is_the_error_position_coordinated/step_coherence.py": "stage43_step_coherence.py",
+  "uprm/experiments/q01_does_step_scoring_work/audit_eq6_indexing.py": "audit_eq6.py",
+  "uprm/experiments/q01_does_step_scoring_work/audit_toy1_numbers.py": "audit_toy.py",
+  "uprm/experiments/q01_does_step_scoring_work/audit_toy2_arms.py": "audit_toy2b.py",
+  "uprm/experiments/q01_does_step_scoring_work/audit_toy2_subsets.py": "audit_toy2.py",
+  "uprm/experiments/q01_does_step_scoring_work/length_confound_check.py": "uprm_confound.py",
+  "uprm/experiments/q01_does_step_scoring_work/paper_faithful_rerun.py": "stage42_uprm_faithful.py",
+  "uprm/experiments/q01_does_step_scoring_work/per_step_label_vectors.py": "stage44_perstep_score.py",
+  "uprm/experiments/q01_does_step_scoring_work/toy1_first_broken_step.py": "stage32_uprm_toy1.py",
+  "uprm/experiments/q01_does_step_scoring_work/toy2_joint_scoring.py": "stage33_uprm_toy2.py"
+ },
+ "sbatch": {
+  "uprm/experiments/q02_does_it_help_at_scale/harvest_cleaning_small.sbatch": "stage34_uprm_harvest.sbatch",
+  "uprm/experiments/q02_does_it_help_at_scale/score_all_chains.sbatch": "stage35_score.sbatch",
+  "uprm/experiments/q01_does_step_scoring_work/paper_faithful_rerun.sbatch": "stage42_uprm_faithful.sbatch",
+  "uprm/experiments/q01_does_step_scoring_work/per_step_label_vectors.sbatch": "stage44_perstep.sbatch",
+  "uprm/experiments/q01_does_step_scoring_work/toy1_first_broken_step.sbatch": "stage32_uprm.sbatch",
+  "uprm/experiments/q01_does_step_scoring_work/toy2_joint_scoring.sbatch": "stage33_uprm2.sbatch"
+ },
+ "siblings": {
+  "icm": "/home/rvyalla/multilingual_icm/ICM_work_"
+ }
+}

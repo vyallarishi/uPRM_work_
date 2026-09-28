@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#SBATCH --account=rrg-zhijing
+#SBATCH --job-name=stage35-score
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --gpus-per-node=h100:1
+#SBATCH --mem=124G
+#SBATCH --time=5:00:00
+#SBATCH --output=/home/rvyalla/multilingual_icm/data/uPRM_work_/logs/%x-%a-%j.out
+#SBATCH --array=0-3
+
+set -Eeuo pipefail
+module reset
+module load python/3.11
+module load cuda
+PROJECT_STORAGE="${PROJECT:-${HOME}}"
+export TRANSFORMERS_OFFLINE=1
+export HF_HUB_OFFLINE=1
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+source "${PROJECT_STORAGE}/venvs/sm-icm/bin/activate"
+cd /home/rvyalla/multilingual_icm/data/uPRM_work_/runs
+export PYTHONPATH="/home/rvyalla/multilingual_icm/uPRM_work_:/home/rvyalla/multilingual_icm/ICM_work_${PYTHONPATH:+:$PYTHONPATH}"
+python -m uprm.experiments.q02_does_it_help_at_scale.score_all_chains --self-test
+python -m uprm.experiments.q02_does_it_help_at_scale.score_all_chains --dry-run --shard "${SLURM_ARRAY_TASK_ID}" --of 4
+python -m uprm.experiments.q02_does_it_help_at_scale.score_all_chains --shard "${SLURM_ARRAY_TASK_ID}" --of 4
